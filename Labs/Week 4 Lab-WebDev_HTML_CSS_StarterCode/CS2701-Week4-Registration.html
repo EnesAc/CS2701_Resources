@@ -4,7 +4,8 @@
         <title>
             Fresh Food For All
         </title>
-        <link rel="stylesheet" href="CS2701-Week4-Registration.css">
+        <link rel="stylesheet" href="CS2701-Week4-Registration.css"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <header></header>
@@ -14,14 +15,43 @@
                        The css class of the menu is "navlist"
                        Check lecture slides about lists, an example of a more basic menu, and CSS class selector-->
             <ul class="navlist">
+                <li>Home</li>
+                <li>Register</li>
+                <li>Login</li>
+                <li>Help</li>
             </ul>
          </nav>
         <main>
             <!-- Check Week 4 Lecture to learn about HTML5 semantic elements-->
             <aside>
+                <input type="text" class="search" id="search" name="search" placeholder="Search"><br>
             </aside>
             <section>
                 <form class="center" novalidate>
+                    <label for="name">Name: </label><br>
+                    <input type="text" id="name" name="name" required><br><br>
+
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+                    
+                    <label for="password">Password: </label><br> 
+                    <input type="password" id="password" name="password" required><br><br>
+
+                    <label for="re-type-password">Re-type password:</label><br>
+                    <input type="password" id="re-type-password" name="re-type-password" required><br><br>
+                    
+                    <input type="checkbox" id="buyer" name="buyer" value="buyer">
+                    <label for="buyer">I want to buy produce directly from allotment owners.</label><br>
+                    
+                    <input type="checkbox" id="seller" name="seller" value="seller">
+                    <label for="seller">I want to sell produce from my allotment.</label><br><br>
+                    
+                    <input type="checkbox" id="terms" name="terms" value="terms">
+                    <label for="terms">I agree the Terms of Use and Privacy Policy</label><br><br>
+
+                    <input type="submit" value="Submit">
+                    <label for="learn">Learn more</label>
+                    
                 <!-- ToDo: Implement the form containing 
                            Name - type text
                            email- type text
@@ -34,10 +64,7 @@
                         -->
                     <!-- Example given for user type checkboxes-->
                     
-                    <input type="checkbox" id="buyer" name="buyer" value="buyer">
-                    <label for="buyer">I want to buy produce directly from allotment owners.</label><br>
-                    <input type="checkbox" id="seller" name="seller" value="seller">
-                    <label for="seller">I want to sell produce from my allotment.</label><br><br>
+                   
 
                     <br><br>
                 </form>

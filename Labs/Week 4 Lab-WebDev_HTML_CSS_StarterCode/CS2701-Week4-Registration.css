@@ -23,9 +23,14 @@ nav {
 ul.navlist{
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 10px;
     overflow: hidden;
     background-color: #333;
+}
+
+li{
+    color:white;
+    padding: 10px;
 }
 
 ul.navlist li
@@ -65,12 +70,16 @@ section, aside {
 aside {
     /*ToDo: Set width.ToDo: For fluid layouts, use min-width, max-width, and set to relative 
    values, like 25% of the page.*/ 
+    width: 25%;
     background-color: #deded8;
+    min-width: 180px;
 }
 
 section {
     /*ToDo: Set width. For fluid layouts, use min-width, max-width, and set to relative 
    values, like 75% of the page.*/
+   width: 75%;
+   min-width: 350px;
 }
 
 /*Styling for search in aside*/
