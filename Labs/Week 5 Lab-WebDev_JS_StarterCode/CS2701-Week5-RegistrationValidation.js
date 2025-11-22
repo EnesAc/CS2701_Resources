@@ -36,12 +36,31 @@ function validateForm() {
     formValid = false;
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 // Validate that all required fields are filled
-
+    if(formData.username === ""){
+        alert("Username box is empty!");
+    } else if(formData.email === ""){
+        alert("Email box is emtpy!");
+    } else if(formData.password === ""){
+        alert("Password box is emtpy!");
+    } else if(repPassword === ""){
+        alert("Re-type password box is emtpy!");
+    }
 // Verify that the email address is in a valid format
-
+    if (!formData.email.match(mailformat)){
+        alert("Invalid e-mail address. Please enter your e-mail again.");
+    }
 // Perform password strength and matching checks
-
+    if(!formData.password.match(repPassword)){
+        alert("Your Re-type password is not matching with Password");
+    }
 // Validate that the required checkboxes are selected
+    if(!formData.buyer && !formData.seller){
+        alert("Choose if you want to buy or sell produce");
+    } 
+    if(!tosCheckBox){
+        alert("You have to accept the Terms of Use and Privacy Policy")
+    }
+    formValid = true;
 }
 
 //Function to write the Registration success on the page
@@ -62,6 +81,7 @@ function createNewParagraph(content){
 function submitForm(){
     readForm();
 // call the validation function
+    validateForm();
     if (formValid){
         var formText = formData.username +" registered as:\n";
         formText += formData.buyer?"buyer\n":"";
@@ -69,5 +89,14 @@ function submitForm(){
 
         console.log(formText);
         createNewParagraph(formText);
+    }
+}
+
+function checkName(){
+    let name = document.getElementById("name").value.trim();
+    if(name === ""){
+        alert("Please enter your name.");
+    } else {
+        document.getElementById("hedgehogForm").submit();
     }
 }
