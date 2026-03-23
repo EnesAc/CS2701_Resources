@@ -51,7 +51,7 @@ export default function Registration(){
         event.preventDefault();
 
         if(validateForm()){
-            axios.post('/user',{
+            axios.post('http://localhost:8080/user',{
                 name: name.current.value,
                 email: email.current.value,
                 password: password.current.value,
